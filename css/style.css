@@ -461,6 +461,12 @@ label {
 
 .header .top-section .logo {
   padding-left: 30px; }
+  @media (max-width: 992px) {
+    .header .top-section .logo {
+      padding: 20px; } }
+@media (max-width: 992px) {
+  .header .top-section .contact {
+    display: none; } }
 .header .top-section .contact ul li {
   font-size: 25px;
   color: #ffffff;
@@ -468,11 +474,46 @@ label {
   font-family: 'arboria-bold'; }
   .header .top-section .contact ul li span {
     padding-left: 10px; }
+.header .top-section .toggle {
+  display: none; }
+  @media (max-width: 767px) {
+    .header .top-section .toggle {
+      display: block; } }
+@media (max-width: 767px) {
+  .header .mynav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #3573ab;
+    z-index: 9;
+    -webkit-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    -webkit-transform: translate(100%, 0);
+    -ms-transform: translate(100%, 0);
+    -o-transform: translate(100%, 0);
+    transform: translate(100%, 0); }
+    .header .mynav.show-menu {
+      -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+      -o-transform: translate(0, 0);
+      transform: translate(0, 0); } }
 .header .mynav ul {
   display: table;
   margin: 0 auto; }
+  @media (max-width: 767px) {
+    .header .mynav ul {
+      display: block; } }
   .header .mynav ul li {
     padding: 0 15px; }
+    @media (max-width: 992px) {
+      .header .mynav ul li {
+        padding: 0 5px; } }
+    @media (max-width: 767px) {
+      .header .mynav ul li {
+        float: none; } }
     .header .mynav ul li a {
       padding: 10px 15px;
       font-family: 'avenir-medium';
@@ -483,7 +524,28 @@ label {
         -o-transition: all 0.75s ease-out;
         transition: all 0.75s ease-out;
         color: #ffffff;
-        background-color: #145c9d; }
+        background-color: #1998d3; }
+      @media (max-width: 992px) {
+        .header .mynav ul li a {
+          padding: 10px 10px; } }
+.header .mynav .close-menu {
+  display: none;
+  margin: 15px; }
+  @media (max-width: 767px) {
+    .header .mynav .close-menu {
+      display: block;
+      margin-bottom: 20px;
+      z-index: 2; } }
+
+.body-inactive {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 8; }
 
 .baner {
   height: 600px;
@@ -501,22 +563,40 @@ label {
       color: #ffffff;
       font-size: 50px;
       margin: 0; }
+      @media (max-width: 992px) {
+        .baner .baner-contain .bc-text h2 {
+          font-size: 40px; } }
   .baner .baner-note {
     width: auto;
     padding: 10px 30px;
     position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    bottom: -10%;
+    -webkit-transform: translate(-50%, 50%);
+    -ms-transform: translate(-50%, 50%);
+    -o-transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
+    bottom: 0;
     left: 50%; }
+    @media (max-width: 992px) {
+      .baner .baner-note {
+        width: 500px; } }
+    @media (max-width: 767px) {
+      .baner .baner-note {
+        width: 100%; } }
     .baner .baner-note .prop {
       padding-right: 30px; }
+      @media (max-width: 767px) {
+        .baner .baner-note .prop {
+          display: none; } }
     .baner .baner-note .val p {
       margin: 0;
       color: #ffffff;
       font-size: 25px; }
+      @media (max-width: 992px) {
+        .baner .baner-note .val p {
+          font-size: 20px; } }
+      @media (max-width: 767px) {
+        .baner .baner-note .val p {
+          font-size: 17px; } }
 
 .sec-title h2 {
   font-family: 'arboria-bold';
@@ -525,10 +605,16 @@ label {
   margin: 0;
   border-left: 1px solid #0b509f;
   padding: 30px; }
+  @media (max-width: 992px) {
+    .sec-title h2 {
+      font-size: 30px; } }
 
 .sec-para p {
   font-family: 'avenir-medium';
   margin-top: 30px; }
+  @media (max-width: 992px) {
+    .sec-para p {
+      margin-top: 20px; } }
 
 .site-btn {
   background-color: #1998d3;
@@ -540,14 +626,11 @@ label {
 .hoofdkantoor-brabant {
   padding: 100px 0;
   background-color: rgba(0, 159, 227, 0.05); }
-  .hoofdkantoor-brabant .hb-left .hb-tittle h3 {
-    font-size: 35px;
-    color: #1998d3; }
+  @media (max-width: 767px) {
+    .hoofdkantoor-brabant .hb-right {
+      display: none; } }
   .hoofdkantoor-brabant .hb-text {
     margin-top: 60px; }
-    .hoofdkantoor-brabant .hb-text p {
-      font-family: 'avenir-medium';
-      margin-top: 30px; }
 
 .brabant-commercieel {
   margin-bottom: 75px; }
@@ -555,8 +638,6 @@ label {
     width: 50%;
     padding: 40px;
     background-color: #ededed; }
-    .brabant-commercieel .bc-right .sec-para {
-      width: 535px; }
 
 .brabant-arbeidsmarkt {
   margin-bottom: 75px; }
@@ -573,10 +654,16 @@ label {
       display: table;
       margin: 0 auto;
       text-align: center; }
+      @media (max-width: 992px) {
+        .brabant-slider #carousel-example-generic .carousel-inner .item .item-text {
+          width: 100%; } }
       .brabant-slider #carousel-example-generic .carousel-inner .item .item-text h3 {
         color: #ffffff;
         font-size: 22px;
         margin: 0; }
+        @media (max-width: 992px) {
+          .brabant-slider #carousel-example-generic .carousel-inner .item .item-text h3 {
+            font-size: 18px; } }
 
 .laatste-nieuws {
   margin-bottom: 75px; }
@@ -585,6 +672,9 @@ label {
     .laatste-nieuws .lnc-listing .ln-column {
       border: 1px solid #1998d3;
       padding: 10px; }
+      @media (max-width: 992px) {
+        .laatste-nieuws .lnc-listing .ln-column {
+          margin-bottom: 20px; } }
       .laatste-nieuws .lnc-listing .ln-column .lnc-img {
         margin-bottom: 25px; }
       .laatste-nieuws .lnc-listing .ln-column .lnc-title {
@@ -607,6 +697,9 @@ label {
 
 .footer-baner {
   padding: 70px 0; }
+  @media (max-width: 992px) {
+    .footer-baner .fb-contain {
+      margin-bottom: 30px; } }
   .footer-baner .fb-contain .fbc-title {
     margin-bottom: 30px; }
     .footer-baner .fb-contain .fbc-title h3 {
@@ -615,22 +708,34 @@ label {
       color: #ffffff; }
   .footer-baner .fb-contain .fbc-para {
     width: 500px; }
+    @media (max-width: 992px) {
+      .footer-baner .fb-contain .fbc-para {
+        width: 100%; } }
     .footer-baner .fb-contain .fbc-para p {
       margin: 0;
-      color: #ffffff; }
-  .footer-baner .form .form-inline .form-control {
-    box-shadow: none;
-    width: 400px;
-    height: 42px;
-    padding: 6px 12px;
-    font-size: 13px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: none;
-    border-radius: 0;
-    margin-right: 10px; }
+      color: #ffffff;
+      font-size: 12px; }
+  .footer-baner .form {
+    margin-top: 20px; }
+    .footer-baner .form .form-inline .form-control {
+      box-shadow: none;
+      width: 400px;
+      height: 42px;
+      padding: 6px 12px;
+      font-size: 13px;
+      line-height: 1.42857143;
+      color: #555;
+      background-color: #fff;
+      background-image: none;
+      border: none;
+      border-radius: 0;
+      margin-right: 10px; }
+      @media (max-width: 992px) {
+        .footer-baner .form .form-inline .form-control {
+          width: 579px; } }
+      @media (max-width: 767px) {
+        .footer-baner .form .form-inline .form-control {
+          width: 100%; } }
 
 .footer .top-footer {
   padding-top: 50px;
@@ -681,5 +786,17 @@ label {
 
 .theme-1998d3-bg {
   background-color: #1998d3 !important; }
+
+.theme-3573ab {
+  color: #3573ab !important; }
+
+.theme-3573ab-bg {
+  background-color: #3573ab !important; }
+
+.theme-e29418 {
+  color: #e29418 !important; }
+
+.theme-e29418-bg {
+  background-color: #e29418 !important; }
 
 /*# sourceMappingURL=style.css.map */
