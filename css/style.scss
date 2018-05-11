@@ -255,6 +255,9 @@ label{
 .cover{
 	@include coordinates(0,0,0,0);
 }
+.arboria-bold{
+	font-family:'arboria-bold';
+}
 .circle{
 	border-radius: 50%;
 }
@@ -525,13 +528,18 @@ label{
 				display: none;
 			}
 			ul{
+				background-color: $theme-145c9d;
+				clip-path: polygon(7% 0, 100% 0%, 100% 100%, 0 100%);
 				li{
 					font-size:25px ;
 					color:$theme-ffffff;
-					padding: 20px;
+					padding: 20px 30px 20px 50px;
 					font-family:'arboria-bold';
 					span{
-						padding-left: 10px;
+						padding-left: 0px;
+					}
+					&:last-child{
+						clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
 					}
 				}
 			}
@@ -567,9 +575,9 @@ label{
 			display: table;
 			margin: 0 auto;
 			@media  (max-width:767px){
-					display: block;
-					margin-top: 60px;
-				}
+				display: block;
+				margin-top: 60px;
+			}
 			li{
 				padding: 0 15px;
 				@media  (max-width:992px){
@@ -628,6 +636,12 @@ label{
 .baner{
 	height: 600px;
 	position:relative;
+	@media  (max-width:992px){
+		max-height: 450px;
+	}
+	@media  (max-width:767){
+		max-height: 250px;
+	}
 	.baner-contain{
 		position:absolute;
 		@include translateY(-50%);
@@ -641,7 +655,7 @@ label{
 				font-size: 50px;
 				margin: 0;
 				@media  (max-width:992px){
-					font-size: 40px;
+					font-size: 30px;
 				}
 			}
 		}
@@ -689,6 +703,7 @@ label{
 		margin: 0;
 		border-left:1px solid #0b509f;
 		padding: 30px;
+		display: inline-block;
 		@media  (max-width:992px){
 			font-size: 30px;
 		}
@@ -712,12 +727,19 @@ label{
 	display: inline-block;
 }
 .hoofdkantoor-brabant{
-
 	padding: 100px 0;
-	background-color:rgba(0,159,227,0.05);
+	background: transparent url('../images/hoofdkantoor-brabant--bg.png') no-repeat;
+	background-size: 57% 100%;
+	@media  (max-width:992px){
+		padding: 50px 0;
+	}
 	.hb-right{
-		@media  (max-width:767px){
-			display: none;
+		@media  (max-width:992px){
+			padding:10px 0;
+			text-align: center;
+			img{
+				max-width: 200px;
+			}
 		}
 	}
 	.hb-left{
@@ -730,6 +752,23 @@ label{
 }
 .brabant-commercieel{
 	margin-bottom: 75px;
+	@media  (max-width:992px){
+		margin-bottom: 35px;
+	}
+	.bc-left{
+		position: relative;
+		&:after{
+	    background: #009fe3;
+	    position: absolute;
+	    clip-path: polygon(0 0, 100% 0%, -15% 129%, 0% 100%);
+	    content: "";
+	    top: 0;
+	    left: 0;
+	    z-index: 2;
+	    width: 44%;
+	    bottom: 0;
+		}
+	}
 	.bc-right{
 		width: 50%;
 		padding: 40px;
@@ -737,9 +776,9 @@ label{
 		.bc-title{
 		}
 		.sec-para{
-			//width: 535px;
+			max-width: 75%;
 			@media  (max-width:992px){
-				//width: 100%;
+				max-width: 100%;
 			}
 		}
 	}
@@ -756,9 +795,15 @@ label{
 }
 .brabant-arbeidsmarkt{
 	margin-bottom: 75px;
+	@media  (max-width:992px){
+		margin-bottom: 35px;
+	}
 }
 .brabant-slider{
-	margin-bottom: 100px;
+	margin-bottom: 75px;
+	@media  (max-width:992px){
+		margin-bottom: 35px;
+	}
 	#carousel-example-generic{
 		padding-top: 90px;
 		padding-bottom: 90px;
@@ -793,8 +838,19 @@ label{
 }
 .laatste-nieuws{
 	margin-bottom: 75px;
+	@media  (max-width:992px){
+		margin-bottom: 35px;
+	}
 	.sec-title{
-
+		span{
+			font-size: 15px;
+			text-align: right;
+			color: $theme-1998d3;
+			padding-top: 50px;
+			@media  (max-width:992px){
+				padding-top:10px;
+			}
+		}
 	}
 	.lnc-listing{
 		margin-top: 50px;
@@ -835,22 +891,35 @@ label{
 		}
 	}
 }
+.footer-combine{
+	position: relative;
+	&:after{
+		background: rgba(255,255,255,0.08);
+		position: absolute;
+		clip-path: polygon(0 0, 100% 0%, -29% 129%, 0% 100%);
+		content:"";
+		top:0;
+		left:0;
+		z-index: 2;
+		width: 10%;
+		height: 50%;
+	}
+}
 .footer-baner{
-	padding: 70px 0;
+	padding: 40px 0;
 	.fb-contain{
 		@media  (max-width:992px){
 			margin-bottom: 30px;
 		}
 		.fbc-title{
-			margin-bottom: 30px;
+			margin-bottom: 22px;
 			h3{
 				margin: 0;
 				font-size: 25px;
 				color:$theme-ffffff;
 			}
 		}
-		.fbc-para{
-			width: 500px;
+		.fbc-para{;
 			@media  (max-width:992px){
 				width: 100%;
 			}
@@ -866,7 +935,7 @@ label{
 		.form-inline{
 			.form-control{
 				box-shadow:none;
-				width: 400px;
+				//width: 400px;
 				height: 42px;
 				padding: 6px 12px;
 				font-size: 13px;
@@ -877,16 +946,14 @@ label{
 				border: none;
 				border-radius: 0;
 				margin-right: 10px;
-				@media  (max-width:992px){
-					width: 579px;
-				}
-				@media  (max-width:767px){
-					width: 100%;
-				}
+				width: 100%;
 			}
-			@media (max-width: 767px){
-				.site-btn{
-					width: 100%;
+			button{
+				width: 100%;
+			}
+			@media (max-width:767px){
+				button{
+					margin-top: 10px;
 				}
 			}
 		}
@@ -896,6 +963,17 @@ label{
 	.top-footer{
 		padding-top: 50px;
 		padding-bottom: 100px;
+		@media (max-width:992px){
+			padding: 35px 0 15px;
+		}
+		.col-md-9{
+			.col-md-4{
+				padding-left:60px;
+				@media (max-width: 992px){
+					padding-left: 0;
+				}
+			}
+		}
 		.footer-logo{
 			.fl-logo{
 				margin-bottom: 50px;
@@ -921,27 +999,107 @@ label{
 					}
 				}
 			}
+			address{
+				span{
+					font-size: 12px;
+				}
+			}
+			.worden-para{
+				p{
+					margin: 0;
+					font-size: 12px;
+				}
+			}
 		}
 		@media (max-width: 992px){
 			text-align: center;
 			.bb-logo{
 				float: none !important;
 			}
+			.footer-logo{
+				.fl-logo{
+					margin-bottom: 30px;
+					img{
+						max-width: 250px;
+					}
+				}
+				.fl-text{
+					margin-bottom: 30px;
+				}
+			}
+			.main-link{
+				margin-bottom: 20px;
+				.ml-title{
+					margin-bottom: 15px;
+					h3{
+						margin:0;
+					}
+				}
+				ul{
+					li{
+						margin: 10px 0;
+						a{
+							padding: 10px 0;
+						}
+					}
+				}
+			}
 		}
 	}
+}
 	.copyright{
+		line-height:1;
 		padding: 12px 0;
-		p{
-			margin: 0;
-			font-size: 12px;
-			color: $theme-145c9d
-
+		color: $theme-145c9d;
+		font-size: 12px;
+		span,
+		ul{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		span{
+			margin-right: 5px;
+		}
+		ul{
+			li{
+				padding:0 7px;
+				border-left:1px solid $theme-145c9d;
+				a{
+					position: relative;
+				}
+				&:last-child{
+					a{
+						border-right:none;
+					}
+				}
+			}
 		}
 		@media (max-width: 992px){
 			text-align: center;
 		}
+		@media (max-width:767px){
+			span{
+				display: block;
+				margin-right:0;
+			}
+			ul{
+				li{
+					display: inline;
+					float: none;
+					border-left:0;
+					margin-top:7px;
+					border-right:1px solid $theme-145c9d;
+					a{
+						display: inline-block;
+						margin-top:7px;
+					}
+					&:last-child{
+						border:0;
+					}
+				}
+			}
+		}
 	}
-}
 // Colors - Theme Declaration
 
 .theme-ffffff{
