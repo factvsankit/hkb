@@ -476,7 +476,8 @@ label {
           max-width: 200px; } }
   .header .top-section .contact ul {
     background-color: #3573ab;
-    clip-path: polygon(7% 0, 100% 0%, 100% 100%, 0 100%); }
+    clip-path: polygon(7% 0, 100% 0%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(7% 0, 100% 0%, 100% 100%, 0 100%); }
     .header .top-section .contact ul li {
       font-size: 25px;
       color: #ffffff;
@@ -485,7 +486,8 @@ label {
       .header .top-section .contact ul li span {
         padding-left: 0px; }
       .header .top-section .contact ul li:last-child {
-        clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%); }
+        clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+        -webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%); }
     @media (max-width: 1023px) {
       .header .top-section .contact ul {
         clip-path: none; }
@@ -711,6 +713,7 @@ label {
       background: #009fe3;
       position: absolute;
       clip-path: polygon(0 0, 100% 0%, -15% 129%, 0% 100%);
+      -webkit-clip-path: polygon(0 0, 100% 0%, -15% 129%, 0% 100%);
       content: "";
       top: 0;
       left: 0;
@@ -816,6 +819,7 @@ label {
     background: rgba(255, 255, 255, 0.08);
     position: absolute;
     clip-path: polygon(0 0, 100% 0%, -29% 129%, 0% 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0%, -29% 129%, 0% 100%);
     content: "";
     top: 0;
     left: 0;

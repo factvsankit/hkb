@@ -527,6 +527,7 @@ label{
 			ul{
 				background-color: $theme-3573ab;
 				clip-path: polygon(7% 0, 100% 0%, 100% 100%, 0 100%);
+				-webkit-clip-path: polygon(7% 0, 100% 0%, 100% 100%, 0 100%);
 				li{
 					font-size:25px ;
 					color:$theme-ffffff;
@@ -537,6 +538,7 @@ label{
 					}
 					&:last-child{
 						clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
+						-webkit-clip-path: polygon(12% 0, 100% 0%, 100% 100%, 0 100%);
 					}
 				}
 				@media (max-width: 1023px){
@@ -794,6 +796,7 @@ label{
 			background: #009fe3;
 			position: absolute;
 			clip-path: polygon(0 0, 100% 0%, -15% 129%, 0% 100%);
+			-webkit-clip-path: polygon(0 0, 100% 0%, -15% 129%, 0% 100%);
 			content: "";
 			top: 0;
 			left: 0;
@@ -933,6 +936,7 @@ label{
 		background: rgba(255,255,255,0.08);
 		position: absolute;
 		clip-path: polygon(0 0, 100% 0%, -29% 129%, 0% 100%);
+		-webkit-clip-path: polygon(0 0, 100% 0%, -29% 129%, 0% 100%);
 		content:"";
 		top:0;
 		left:0;
