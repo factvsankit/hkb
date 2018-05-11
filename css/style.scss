@@ -690,18 +690,19 @@ label{
 		}
 	}
 	.baner-note{
-		width: auto;
-		padding:10px 30px;
 		position:absolute;
-		@include translate(-50% ,50%);
+		@include translateY(50%);
 		bottom: 0;
-		left: 50%;
-		@media  (max-width:992px){
-			width: 500px;
-		}
-		@media  (max-width:767px){
-			width: 100%;
-
+		left: 0;
+		right:0;
+		text-align: center;
+		.banner-note-content{
+			padding:17px 40px;
+			display: table;
+			margin: 0 auto;
+			@media  (max-width:767px){
+				padding: 15px;
+			}
 		}
 		.prop{
 			padding-right: 30px;
